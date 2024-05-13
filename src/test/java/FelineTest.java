@@ -4,7 +4,9 @@ import org.junit.Test;
 import java.util.List;
 
 public class FelineTest {
-    Feline feline = new Feline();
+    private Feline feline = new Feline();
+    private int kittensOne = 1;
+    private int kittentsCount = 3;
     @Test
     public void eatMeatTestToReturnFelineFoodList() throws Exception {
         Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), feline.eatMeat());
@@ -17,11 +19,11 @@ public class FelineTest {
 
     @Test
     public void getKittensToReturnOne() {
-        Assert.assertEquals(1, feline.getKittens());
+        Assert.assertEquals(kittensOne, feline.getKittens());
     }
 
     @Test
     public void getKittensToReturnSpecifiedAmount() {
-        Assert.assertEquals(3, feline.getKittens(3));
+        Assert.assertEquals(kittentsCount, feline.getKittens(3));
     }
 }
